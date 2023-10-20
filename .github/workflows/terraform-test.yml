@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  terraform:
+  terraform-test:
     name: 'Terraform'
     runs-on: ubuntu-latest
 
