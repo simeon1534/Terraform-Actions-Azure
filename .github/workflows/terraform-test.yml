@@ -1,14 +1,13 @@
 
 
-name: 'Terraform'
+name: 'Terraform Test'
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
 
-permissions:
-  contents: read
+
 
 jobs:
   terraform:
