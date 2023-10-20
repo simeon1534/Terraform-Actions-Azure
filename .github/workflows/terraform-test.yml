@@ -6,16 +6,16 @@ on:
       - main  # Adjust this to your main branch name
 
 jobs:
-  terraform:
+  terraform-test:
     name: Test Terraform
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
 
       - name: Initialize Terraform
         run: terraform init
@@ -26,9 +26,4 @@ jobs:
       - name: Format Terraform Configuration
         run: terraform fmt -check -recursive
 
-      - name: Plan Terraform Changes
-        run: terraform plan -var-file="terraform.tfvars"
-
-      - name: Apply Terraform Changes
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -var-file="terraform.tfvars"
+  
