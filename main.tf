@@ -88,4 +88,5 @@ resource "azurerm_app_service_source_control" "assc" {
   repo_url               = var.repo_url
   branch                 = "master"
   use_manual_integration = true
+
 }
