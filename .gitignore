@@ -1,0 +1,6 @@
+.terraform
+TaskBoardWebApp
+.terraform.lock.hcl
+outputs.tf
+terraform.tfstate
+terraform.tfstate.backup
